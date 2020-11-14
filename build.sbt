@@ -2,17 +2,21 @@ name := """infra-core"""
 
 organization := "br.com.infra"
 
-version := "1.1-SNAPSHOT"
+version := "1.2"
 
 lazy val root = (project in file("."))
   .enablePlugins(PlayJava)
   .disablePlugins(PlayLogback)
 
-scalaVersion := "2.12.8"
+scalaVersion := "2.13.1"
 
-crossScalaVersions := Seq("2.11.12", "2.12.4")
+crossScalaVersions := Seq("2.11.12", "2.12.4", "2.12.8")
 
 libraryDependencies += guice
+
+// Apache Commons
+libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.11"
+libraryDependencies += "org.apache.commons" % "commons-collections4" % "4.4"
 
 // Testing libraries for dealing with CompletionStage...
 libraryDependencies += "org.assertj" % "assertj-core" % "3.6.2" % Test
