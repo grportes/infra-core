@@ -1,6 +1,6 @@
 name := """infra-core"""
 organization := "br.com.infra"
-version := "1.3"
+version := "1.4"
 
 lazy val root = (project in file("."))
   .enablePlugins(PlayJava)
@@ -21,6 +21,9 @@ libraryDependencies += "com.lowagie" % "itext" % "2.1.7"
 
 // Vavr: https://www.vavr.io/
 libraryDependencies += "io.vavr" % "vavr" % "0.10.3"
+
+// Caelum
+libraryDependencies += "br.com.caelum.stella" % "caelum-stella-core" % "2.1.4"
 
 // Testing libraries for dealing with CompletionStage...
 libraryDependencies += "org.assertj" % "assertj-core" % "3.6.2" % Test
